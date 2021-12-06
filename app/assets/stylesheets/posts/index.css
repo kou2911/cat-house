@@ -2,6 +2,10 @@
   background-color: whitesmoke;
 }
 
+ul{
+  list-style: none;
+
+}
 
 .title {
   padding: 40px;
