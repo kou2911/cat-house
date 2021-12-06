@@ -1,0 +1,76 @@
+<%=link_to 'Cat Home',root_path, class:"title", id:"title" %>
+<div class= "cat-new">
+ <h2 class="cat-form">ねこ情報入力</h2>
+ <%= form_with model: @cat, url: post_path(@cat.id), local: true do |f| %>
+   <%= render 'shared/error_messages', model: f.object %>
+   <div class="img-upload">
+      <div class="weight-bold-text">
+        ねこ画像
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックして画像をアップロード
+        </p>
+        <%= f.file_field :images, name:'cat[images][]', id:"cat-image" %>
+      </div>
+      <div id="image-list"></div> <!--プレビュー表示場所-->
+    </div>
+
+    <div class="new-cats">
+      <div class="weight-bold-text">
+        ねこの名前
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :cat_name, class:"cats-name", id:"cat-name", placeholder:"ねこのお名前（必須 20文字まで)", maxlength:"20" %>
+      <div class="cats-explain">
+        <div class="weight-bold-text">
+          ねこの特徴・状態
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :feature, class:"cats-feature", id:"cat-feature", placeholder:"ねこの特徴・状態（必須 1,000文字まで）,  例)茶白真っ直ぐ長いしっぽ5kgくらい大きな甘えん坊さんでとてもかわいいです。遊びも大好き、お外を眺めるのも好き夜は一緒に寝てくれます。" ,rows:"7" ,maxlength:"1000" %>
+      </div>
+    </div>
+
+    <div class="cats-detail">
+      <div class="form">
+        <div class="weight-bold-text">
+          ねこの年齢(分からない場合は推定)
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:age_id, Age.all, :id, :name, {}, {class:"select-box", id:"cat-age"}) %>
+        <div class="weight-bold-text">
+          保護した地域
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:place_id,Place.all, :id, :name, {}, {class:"select-box", id:"cat-place"}) %> 
+        <div class="weight-bold-text">
+          ワクチンの有無
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:vaccine_id,Vaccine.all, :id, :name, {}, {class:"select-box", id:"cat-vaccine"}) %> 
+        <div class="weight-bold-text">
+          去勢したかどうか
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:castration_id,Castration.all, :id, :name, {}, {class:"select-box", id:"cat-castration"}) %> 
+        <div class="weight-bold-text">
+          病気の有無
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:sickness_id, Sickness.all, :id, :name, {}, {class:"select-box", id:"cat-sickness"}) %> 
+    </div>
+
+          <div class="cats-explain">
+        <div class="weight-bold-text">
+          その他、引き取り希望者に伝えたいこと・メッセージ
+        </div>
+        <%= f.text_area :memo, class:"cats-memo", id:"cat-memo", placeholder:"ねこの特徴・状態（必須 1,000文字まで）,   例)大切な命を託すために里親詐欺を防ぐ目的で、里親様となって頂く方には身分証の提示をお願いさせて頂いております。また、ご本人以外の緊急連絡先をお伺いいたします。" ,rows:"7" ,maxlength:"1000" %>
+      </div>
+
+    <div class="offer-btn-contents">
+      <%= f.submit "募集する" ,class:"offer-btn" %>
+      <%=link_to 'もどる', post_path(@cat.id), class:"back-btn" %>
+    </div>
+  <% end %>
+</div>

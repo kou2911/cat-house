@@ -1,0 +1,96 @@
+
+
+.cat-new{
+  font-family: "Source Sans Pro", Helvetica, Arial, "æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“", "YuGothic", "ãƒ¡ã‚¤ãƒªã‚ª", "Meiryo", sans-serif;
+  text-align: center;
+  margin:0 auto ;
+}
+
+
+.cat-form{
+  color: #884C3A;
+  font-size: 30px;
+  font-weight: bold;
+  border-top: 1px solid black;
+  margin-top: 20px;
+  padding-top: 10px;
+}
+
+.list-image{
+  height: 100px;
+  width: 100px;
+}
+
+.weight-bold-text {
+  font-weight: bold;
+  color: #926244;
+  min-width: 170px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.indispensable {
+  background: #DB4D6D;
+  margin-left: 8px;
+  padding: 3px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.cats-feature {
+  width: 30%;
+  height: 70px;
+  padding: 16px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  resize: none;
+}
+
+
+
+.cats-memo{
+  width: 30%;
+  height: 70px;
+  padding: 16px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  resize: none;
+  margin-bottom: 20px;
+}
+
+.cats-address{
+  width: 20%;
+  height: 25px;
+  padding-top: 5px;
+  padding-left: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  resize: none;
+  margin-bottom: 20px;
+
+
+}
+
+
+.offer-btn{
+  background: #926244;
+  border: 1px solid #926244;
+  color: #fff;
+  width: 40%;
+  height: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+.back-btn{
+  font-weight: bold;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #926244;
+  display: block;
+}

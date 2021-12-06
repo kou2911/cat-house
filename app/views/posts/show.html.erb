@@ -1,0 +1,83 @@
+<header class = "top-header">
+    <%=link_to 'Cat Home',root_path, class:"title", id:"title" %>
+    <ul class= "center-contents">
+    <% if user_signed_in?%>
+      <li class = "user-nickname"><%=current_user.nickname%>さん</li>
+      <li><%=link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout"%></li>
+      <% else %>
+      <li> <%= link_to '新規登録',  new_user_registration_path, class: "registrations", id: "registrations"%> </li>
+      <li> <%= link_to 'ログイン',  user_session_path, class: "sessions",id: "sessions"%></li>
+      <% end %>
+    </ul>
+</header>
+
+
+
+
+<div class = "cat-detail">
+
+
+
+  <div class="show-cat">
+  <div class = "main-cat" id ="main-cat">
+  <%=image_tag @cat.images[0]%>
+  </div>
+
+  <ul class ="sub-cat" id ="sub-cat">
+   <%@cat.images.each do |image|%>
+     <li><%=image_tag image%></li>
+   <% end %>
+  </ul>
+  </div>
+
+  <div class ="cat-name"> <%=@cat.cat_name%></div>
+  
+   <div class="cat-change">
+   <%if current_user.id == @cat.user_id%>
+    <%= link_to "投稿内容の編集", edit_post_path(@cat.id), method: :get, class: "cat-edit" %>
+    <%= link_to "投稿内容の削除", post_path(@cat.id), method: :delete, class:"cat-destroy" %>
+    <% end %>
+  </div>
+
+
+  <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-cat">特徴</th>
+          <td class="detail-value"><%=simple_format(@cat.feature)%></td>
+        </tr>
+        <tr>
+          <th class="detail-cat">年齢</th>
+          <td class="detail-value"><%=@cat.age.name%></td>
+        </tr>
+        <tr>
+          <th class="detail-cat">募集地域</th>
+          <td class="detail-value"><%=@cat.place.name%></td>
+        </tr>
+        <tr>
+          <th class="detail-cat">ワクチンの有無</th>
+          <td class="detail-value"><%=@cat.vaccine.name%></td>
+        </tr>
+        <tr>
+          <th class="detail-cat">病気の有無</th>
+          <td class="detail-value"><%=@cat.sickness.name%></td>
+        </tr>
+        <tr>
+          <th class="detail-cat">去勢の有無</th>
+          <td class="detail-value"><%=@cat.castration.name%></td>
+        </tr>
+        <tr>
+          <th class="detail-cat">保護主からのメッセージ</th>
+          <td class="detail-value"><%=simple_format(@cat.memo)%></td>
+        </tr>
+        <tr>
+        <% if user_signed_in?  %>
+         <th class="detail-cat">保護主の連絡先</th>
+          <td class="detail-value"><%=@cat.user.email%></td>
+         </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <%=link_to 'もどる', root_path, class:"back-btn" %>
+</div>
+

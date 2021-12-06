@@ -1,0 +1,212 @@
+.all{
+  background-color: whitesmoke;
+}
+
+
+.title {
+  padding: 40px;
+  display: block;
+  text-align: center;
+  font-size: 40px;
+  font-family:Arial, Helvetica, sans-serif;
+  color:#926244;;
+  text-decoration: none;
+}
+
+.center-contents{
+  justify-content: center;
+  display: flex;
+  text-align: center;
+  font-weight: bold;
+}
+
+.user-nickname{
+  margin-right: 50px;
+  font-size: 20px;
+  color: #926244;
+  text-decoration: none;
+}
+
+.logout{
+  font-size: 20px;
+  text-decoration: none;
+  color: #926244;
+  display: inline-block;
+  position: relative;
+
+}
+
+.logout::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  width: 100%;
+  height: 3px;
+  background:#926244;
+  transform: scale(0, 1);
+  transition: 0.4s;
+}
+
+.logout:hover::before{
+  transform: scale(1);
+}
+
+.registrations{
+  margin-right: 50px;
+  font-size: 20px;
+  display: inline-block;
+	position: relative;
+  color: #926244;
+  text-decoration: none;
+}
+
+.registrations::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  width: 100%;
+  height: 3px;
+  background:#926244;
+  transform: scale(0, 1);
+  transition: 0.4s;
+}
+
+.registrations:hover:before{
+  transform: scale(1);
+}
+
+
+
+.sessions{
+  font-size: 20px;
+  text-decoration: none;
+  display: inline-block;
+	position: relative;
+  color: #926244;
+}
+
+.sessions::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  width: 100%;
+  height: 3px;
+  background:#926244;
+  transform: scale(0, 1);
+  transition: 0.4s;
+}
+
+.sessions:hover::before{
+  transform: scale(1);
+}
+
+.cat-information{
+  color:white;
+  padding: 0 0 0 10px;
+  margin: 20px;
+  font-size: 20px;
+  border-radius: 4px;
+  background-color:#967249;
+}
+
+
+
+
+
+
+
+
+
+.list {
+  display: block;
+  overflow: hidden;
+  border-bottom: 1px solid #926244;	/*下線の幅、線種、色*/
+  padding: 20px; /*ボックス内の余白*/
+  line-height: 3;
+}
+/*h4見出しの設定*/
+.list h1 {
+	color: #926244;	/*文字色*/
+  font-size: 40px;
+  text-decoration: none;
+  text-align:left ;
+  margin-top: -30px;
+
+}
+/*画像の設定*/
+.image-2 {
+  border-radius: 4px;
+  width: 25%;  /*画像幅*/
+  float: left;  /*画像を左に回り込み*/
+  margin-right: 3% /*画像の右側に空けるスペース*/
+}
+
+/*段落タグ*/
+.list p {
+  padding: 0 !important;
+  
+}
+
+.cat-age{
+  font-size: 20px;
+  font-weight: bold;
+  color: #926244;
+  display: block;
+}
+
+.cat-show{
+  margin-top: 20px;
+  text-decoration: none;
+  font-weight:bold;
+  color: #926244;
+  display: inline-block;
+  position: relative;
+}
+
+.cat-show::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 12px;
+  width: 100%;
+  height: 3px;
+  background:#926244;
+  transform: scale(0, 1);
+  transition: 0.4s;
+}
+
+.cat-show:hover::before{
+  transform: scale(1);
+}
+
+
+
+.cat-btn {
+  width: 120px;
+  background:#967249;
+  text-align: center;
+  border-radius: 4%;
+  bottom: 32px;
+  right: 32px;
+  position: fixed;
+  padding: 15px;
+  text-decoration: none;
+
+}
+
+.cat-btn-text {
+  color:black;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.cat-btn-icon {
+  width: 60%;
+  
+}
+
+
+

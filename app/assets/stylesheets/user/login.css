@@ -1,0 +1,32 @@
+.login-btn {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.login-brown-btn {
+  width: 300px;
+  background: #926244;
+  border: 1px solid #926244;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 4px;
+  line-height: 48px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.login-flash-message {
+  text-align: center;
+  color: red;
+}
+
+.back-home-btn{
+  margin-left: 27px;
+  color: #926244;
+  font-weight: bold;
+  margin-top: 20px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}

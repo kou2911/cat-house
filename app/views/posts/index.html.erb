@@ -1,0 +1,48 @@
+<div class="all">
+ <header class = "top-header">
+    <%=link_to 'Cat Home',root_path, class:"title", id:"title" %>
+    <ul class= "center-contents">
+    <% if user_signed_in?%>
+      <li class = "user-nickname"><%=current_user.nickname%>さん</li>
+      <li><%=link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout"%></li>
+      <% else %>
+      <li> <%= link_to '新規登録',  new_user_registration_path, class: "registrations", id: "registrations"%> </li>
+      <li> <%= link_to 'ログイン',  user_session_path, class: "sessions",id: "sessions"%></li>
+      <% end %>
+    </ul>
+ </header>
+
+
+
+
+ <section>
+
+  <div class = "cat-information">Cat-Information</div>
+<%if @cats.length == 0 %>
+  <div class="list">
+   <%= image_tag "sample3.jpg", class: "image-2"%>
+  <h1>見出しを入れます。</h1>
+  <%= link_to '詳細を見る', "#", class: "cat-show", id: "cat-show"%>
+ </div>
+<% end %>
+
+ <% @cats.each do |cat| %>
+  <div class= "list">
+     <%=image_tag cat.images[0],class:"image-2"%>
+   <h1> <%=cat.cat_name%></h1>
+       <div class="cat-age"> <%= cat.age.name%></div>
+   <%= link_to '詳細を見る', post_path(cat.id), class: "cat-show", id: "cat-show"%>
+   </div>
+  <% end %>
+
+ </section>
+
+
+ <%= link_to(new_post_path, class: 'cat-btn') do %>
+  <div class='cat-btn-text'>募集する</div>
+  <%= image_tag 'cat.png' ,class: "cat-btn-icon" , id: "cat-icon"%>
+ <% end %>
+</div>
+
+
+
