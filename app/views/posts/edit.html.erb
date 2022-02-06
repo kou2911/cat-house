@@ -1,6 +1,8 @@
 <%=link_to 'Cat Home',root_path, class:"title", id:"title" %>
 <div class= "cat-new">
  <h2 class="cat-form">ねこ情報入力</h2>
+
+ 
  <%= form_with model: @cat, url: post_path(@cat.id), local: true do |f| %>
    <%= render 'shared/error_messages', model: f.object %>
    <div class="img-upload">
