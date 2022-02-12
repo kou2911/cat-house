@@ -1,6 +1,9 @@
 <div class="all">
  <header class = "top-header">
-    <%=link_to 'Cat House',root_path, class:"title", id:"title" %>
+  <div class="fs-1">
+  wwww
+    <%=link_to 'Cat House',root_path, class:"fs-1", id:"title" %>
+    </div>
     <ul class= "center-contents">
     <% if user_signed_in?%>
       <li class = "user-nickname"><%=current_user.nickname%>さん</li>
@@ -12,8 +15,10 @@
     </ul>
  </header>
 
-
-
+<p class="fs-1 Warning">.fs-1 text</p>
+<div class="fs-1">
+kkk
+</div>
 
  <section>
 
