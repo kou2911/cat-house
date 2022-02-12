@@ -1,24 +1,19 @@
 <div class="all">
- <header class = "top-header">
+ <header class = "d-flex justify-content-between">
   <div class="fs-1">
-  wwww
-    <%=link_to 'Cat House',root_path, class:"fs-1", id:"title" %>
+    <%=link_to 'Cat House',root_path, class:"fs-1 text-secondary text-decoration-none", id:"title" %>
     </div>
-    <ul class= "center-contents">
+    <ul class= "mt-3 mx-3 d-flex text-secondary text-decoration-none">
     <% if user_signed_in?%>
       <li class = "user-nickname"><%=current_user.nickname%>さん</li>
-      <li><%=link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout"%></li>
+      <li><%=link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "text-secondary text-decoration-none"%></li>
       <% else %>
-      <li> <%= link_to '新規登録',  new_user_registration_path, class: "registrations", id: "registrations"%> </li>
-      <li> <%= link_to 'ログイン',  user_session_path, class: "sessions",id: "sessions"%></li>
+      <li> <%= link_to '新規登録',  new_user_registration_path, class: " text-secondary text-decoration-none", id: "registrations"%> </li>
+      <li> <%= link_to 'ログイン',  user_session_path, class: "m-3  text-secondary text-decoration-none",id: "sessions"%></li>
       <% end %>
     </ul>
  </header>
 
-<p class="fs-1 Warning">.fs-1 text</p>
-<div class="fs-1">
-kkk
-</div>
 
  <section>
 
