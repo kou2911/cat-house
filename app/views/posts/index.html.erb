@@ -18,13 +18,6 @@
  <section>
 
 
- 
-
-<ul class="slider">
-     <% @cats.each do |cat| %>
-    <li> <%=image_tag cat.images[0],class:"h-25 w-25 flex" %></li>
-    <% end %>
-</ul>
 
 <%if @cats.length == 0 %>
   <div class="list">
